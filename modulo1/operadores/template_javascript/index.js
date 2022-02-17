@@ -93,20 +93,58 @@
 
 
 //Exercício de Escrita 4
-let primeiroNumero = prompt("Digite um número")
-let segundoNumero = prompt("Digite outro")
+// let primeiroNumero = prompt("Digite um número")
+// let segundoNumero = prompt("Digite outro")
 
-primeiroNumero = Number(primeiroNumero)
-segundoNumero = Number(segundoNumero)
+// primeiroNumero = Number(primeiroNumero)
+// segundoNumero = Number(segundoNumero)
 
-let pergunta1 = primeiroNumero > segundoNumero
-console.log("O primeiro número é maior que o segundo? "+ pergunta1)
+// let pergunta1 = primeiroNumero > segundoNumero
+// console.log("O primeiro número é maior que o segundo? "+ pergunta1)
 
-let pergunta2 = primeiroNumero == segundoNumero
-console.log("O primeiro número é igual ao segundo? "+ pergunta2)
+// let pergunta2 = primeiroNumero == segundoNumero
+// console.log("O primeiro número é igual ao segundo? "+ pergunta2)
 
-let pergunta3 = (primeiroNumero % segundoNumero) == 0
-console.log("O primeiro número é divisível pelo segundo? "+ pergunta3)
+// let pergunta3 = (primeiroNumero % segundoNumero) == 0
+// console.log("O primeiro número é divisível pelo segundo? "+ pergunta3)
 
-let pergunta4 = (segundoNumero % primeiroNumero) == 0
-console.log("O segundo número é divisível pelo primeiro? "+ pergunta4)
+// let pergunta4 = (segundoNumero % primeiroNumero) == 0
+// console.log("O segundo número é divisível pelo primeiro? "+ pergunta4)
+
+
+
+// //Desafio 1
+// //Letra (a)
+// let fahrenheit = 77
+// let kelvin = (fahrenheit - 32)*(5/9) + 273.15
+// console.log(`${fahrenheit}°F equivale a ${kelvin}K`)
+
+// //Letra (b)
+// let celsius = 80
+// fahrenheit = (celsius)*(9/5) + 32
+// console.log(`${celsius}°C equivale a ${fahrenheit}°F`)
+
+// //Letra (c)
+// celsius = 30
+// fahrenheit = (celsius)*(9/5) + 32
+// kelvin = (fahrenheit - 32)*(5/9) + 273.15
+// console.log(`${celsius}°C equivale a ${fahrenheit}°F e ${kelvin}K`)
+
+// //Letra (d)
+// celsius = prompt("Insira a temperatura em graus Celsius")
+// fahrenheit = (celsius)*(9/5) + 32
+// kelvin = (fahrenheit - 32)*(5/9) + 273.15
+// console.log(`${celsius}°C equivale a ${fahrenheit}°F e ${kelvin}K`)
+
+
+
+//Desafio 2
+//Letra (a)
+let quilowatt_hora = 280
+let custo_energia = 0.05*280
+console.log(`Custo de Energia é de R$${custo_energia}`)
+
+//Letra(b)
+custo_com_desconto = custo_energia - custo_energia*0.15
+console.log(`Custo de Energia com Desconto é de R$${custo_com_desconto}`)
+

@@ -111,17 +111,48 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
-  
+  let anoAtual = prompt("Em que ano estamos?")
+  let anoNascimento = prompt("Em que ano você nasceu?")
+  let emissaoRG = prompt("Em que ano seu RG foi emitido?")
+  let idade = Number(anoAtual) - Number(anoNascimento)
+  console.log(idade)
+  let idadeRG = Number(anoAtual) - Number(emissaoRG)
+  console.log(idadeRG)
+  caso1 = idade <= 20 && idadeRG >= 5
+  console.log(caso1)
+  caso2 = 20 <= idade && idade <= 50 && idadeRG >= 10
+  console.log(caso2)
+  caso3 = 50 <= idade && idadeRG >= 15
+  console.log(caso3)
+  let resultado = caso1 || caso2 || caso3
+  console.log(resultado)
+  return resultado
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
-
+  ano = Number(ano)
+  let multiplo400 = ano%400 == 0
+  Nmultiplo400 = !multiplo400
+  let multiplo4 = ano%4 == 0
+  let multiplo100 = ano%100 == 0
+  let condicao1 = multiplo400
+  let condicao2_Excessao = multiplo100 && Nmultiplo400
+  let condicao2 = multiplo4 && !condicao2_Excessao
+  let resultado = condicao1 || condicao2
+  return resultado
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
-
+  let idade = prompt("Você tem mais de 18 anos?")
+  let escolaridade = prompt("Você possui ensino médio completo?")
+  let disponibilidade = prompt("Você possui disponibilidade exclusiva durante os horários do curso?")
+  let condicao1 = idade == "sim"
+  let condicao2 = escolaridade == "sim"
+  let condicao3 = disponibilidade == "sim"
+  let resultado = condicao1 && condicao2 && condicao3
+  console.log(resultado)
 }

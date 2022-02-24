@@ -77,10 +77,10 @@
 // console.log(frase)
 
 //Desafio 2
-let frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"]
-console.log(frutas)
-fruta = frutas.indexOf("Abacaxi")
-console.log(fruta)
-tamanho = frutas[fruta].length
-console.log(tamanho)
+// let frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"]
+// console.log(frutas)
+// fruta = frutas.indexOf("Abacaxi")
+// console.log(fruta)
+// tamanho = frutas[fruta].length
+// console.log(tamanho)
 

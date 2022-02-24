@@ -76,24 +76,52 @@
 
 
 //Exercício de Código 3
-function soma(number1,number2){
-    s = number1 + number2
-    console.log(`Soma = ${s}`)
-}
-function subtracao(number1,number2){
-    console.log(`Subtração = ${number1-number2}`)
-}
-function multiplicacao(number1,number2){
-    console.log("Multiplicação = "+number1*number2)
-}
-function divisao(number1,number2){
-    console.log("Divisão = "+number1/number2)
-}
-let valor1 = prompt("Insira um número")
-let valor2 = prompt("Mais um")
-valor1=Number(valor1)
-valor2=Number(valor2)
-soma(valor1,valor2)
-subtracao(valor1,valor2)
-multiplicacao(valor1,valor2)
-divisao(valor1,valor2)
+// function soma(number1,number2){
+//     s = number1 + number2
+//     console.log(`Soma = ${s}`)
+// }
+// function subtracao(number1,number2){
+//     console.log(`Subtração = ${number1-number2}`)
+// }
+// function multiplicacao(number1,number2){
+//     console.log("Multiplicação = "+number1*number2)
+// }
+// function divisao(number1,number2){
+//     console.log("Divisão = "+number1/number2)
+// }
+// let valor1 = prompt("Insira um número")
+// let valor2 = prompt("Mais um")
+// valor1=Number(valor1)
+// valor2=Number(valor2)
+// soma(valor1,valor2)
+// subtracao(valor1,valor2)
+// multiplicacao(valor1,valor2)
+// divisao(valor1,valor2)
+
+
+
+//Desafio 1
+//a.
+// let imprimir = (parametro) => {
+//     console.log(parametro)
+// }
+// imprimir("Amai-vos uns aos outros como Eu vos amei. Somente assim podereis ser reconhecidos como meus discípulos.")
+//b.
+// let imprimir = (parametro) => {
+//     console.log(parametro)
+// }
+// let somaImpressa = (valor1,valor2) => {
+//     let soma = valor1 + valor2
+//     imprimir(soma)
+// }
+// somaImpressa(3,8)
+
+
+
+//Desafio 2
+// function pitagoras(catetoOposto, catetoAdjacente){
+//     hipotenusa = (catetoOposto**2 + catetoAdjacente**2)**(1/2) 
+//     return hipotenusa
+// }
+// let resultado = pitagoras(3,4)
+// console.log(resultado)

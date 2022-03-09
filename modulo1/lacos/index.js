@@ -86,3 +86,41 @@
 //     console.log(`O maior número é ${maior}. O menor número é ${menor}`)
 // }
 // imprimeMaiorMenor(arrayOriginal)
+
+
+
+// Desafios
+// 1.
+// let numeroPensado = Number(prompt("Que número você está pensando?"))
+// let chute = 0
+// let tentativas = 0
+// while(chute != numeroPensado){
+//     chute = Number(prompt("Chute!"))
+//     if(chute < numeroPensado){
+//         console.log("Errrrrou, é maior")
+//     }else{
+//         console.log("Errrrrou, é menor")
+//     }
+//     tentativas++
+// }
+// console.log("Acertou!!!!")
+// console.log(`O número de tentativas foi: ${tentativas}`)
+// 
+// 2.
+// let numeroPensado = Math.floor((Math.random() * 100) + 1)
+// let chute = 0
+// let tentativas = 0
+// while(chute != numeroPensado){
+//     chute = Number(prompt("Chute!"))
+//     if(chute < numeroPensado){
+//         console.log("Errrrrou, é maior")
+//     }else{
+//         console.log("Errrrrou, é menor")
+//     }
+//     tentativas++
+// }
+// console.log("Acertou!!!!")
+// console.log(`O número de tentativas foi: ${tentativas}`)
+//
+// Foi fácil fazer a alteração, não consigo pensar em nada
+// que fosse melhor que a alteração que fiz.

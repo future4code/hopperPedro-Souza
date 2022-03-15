@@ -1,0 +1,34 @@
+Exercícios de Fixação do Conhecimento
+
+Os 7 passos fundamentais para a resolução de problemas e como eles podem nos 
+ajudar a solucionar nossos desafios de programação:
+
+1. Ter Atenção no Enunciado.
+	Devemos ler o enunciado com muita calma e entender o que realmente é
+preciso fazer.
+
+2. Retirar Informações Relevantes
+	Filtrar as informações que nos são úteis e "ignorar" as que não vão
+influenciar na demanda do projeto.
+
+3. Pensar Entradas e Saídas
+	Identificar os parâmetros necessários para que o código funcione e em
+quais resultados devemos gerar a partir desses parâmetros, uma boa pergunta é
+como cada entrada diferente influencia em resultados diferentes.
+
+4. Fazer um Esquema Visual
+	Montar o famoso fluxograma ou qualquer outro esquema que clarifique e 
+resuma a demanda do projeto.
+
+5. Criar Código Feio
+	Listar as soluções em algum lugar e escrevê-las para identificar qual
+se comportou melhor no problema proposto. Avaliar se as respostas providas pelo
+código atendem às expectativas.
+
+6. Testar Força-Bruta
+	Testar a solução mais óbvia. A partir de uma mini descrição do que o
+código necessita realizar, escrevê-lo na linguagem pedida.
+
+7. Refatorar
+	Adequar o Design do código para aumentar sua legibilidade sem mudar 
+funcionalidade alguma.

@@ -1,0 +1,54 @@
+header,footer{
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    font-size: 20px;
+}
+
+div{
+    text-align: center;
+}
+
+p{
+    display: block;
+    background-color: lightblue;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+table,th,td{
+    border: 3px solid;
+    width: 100%;
+    text-align: center;
+}
+
+ul,li{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: chocolate;
+    color: whitesmoke
+}
+
+.menu{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+#bem-vindo{
+    color:whitesmoke;
+    padding: 20px;
+    background-color:chocolate;
+}
+
+.formulario{
+    text-align: left;
+}

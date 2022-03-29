@@ -80,6 +80,8 @@ div img {
 #container-de-descricao>p{
     display: block;
     padding: 150px 0px 0px 0px;
+    width: 180px;
+    margin: auto;
 }
 
 #container-para-comprar {

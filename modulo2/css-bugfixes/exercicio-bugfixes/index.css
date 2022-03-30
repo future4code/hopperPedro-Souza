@@ -110,13 +110,18 @@ div:last-child {
     text-align: center;
 }
 
-table {
+table{
     width: 60%;
     margin:auto;
 }
 
 tr{
     text-align: center;
+}
+
+ol li{
+    margin-left: 15px;
+    text-align: left;
 }
 
 td button {

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.perfil-descricao{
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    height: 250px;
+}
+
+.perfil>img{
+    margin: 25px 50px;
+    height: 200px;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 5px;
+}
+
+.descricao{
+    background-color: whitesmoke;
+    margin: 85px 0px;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 5px;
+}
+
+.descricao>h6{
+    margin: 10px;
+    font-size:large;
+}

@@ -53,10 +53,13 @@ body{
 
 .listas img{
     height: 100px;
+    display: block;
+    margin: 0 auto;
 }
 
 .lista-texto{
     padding: 35px 0px;
+    font-weight: bold;
 }
 
 .lista-passaros{
@@ -65,15 +68,71 @@ body{
 
 .meusProjetos{
     display: flex;
-    flex-direction: column;
     background-color: rgb(221, 221, 221);
     margin: 0 150px;
+    padding: 25px 50px;
+    gap: 50px;
+    justify-content: space-around;
 }
 
-.meusProjetos>div{
-    background-color: brown;
+.meusProjetos img{
+    height: 170px;
+    text-align: center;
 }
 
-.meusProjetos button{
-    
+.meusProjetos img:hover{
+    opacity: 60%;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgb(221, 221, 221);
+    margin: 0 150px;
+    padding: 25px 25px;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.skills img{
+    margin: 0 auto;
+    display: block;
+    height: 100px;
+}
+
+.skills span{
+    display: block;
+    padding: 40px 0;
+    font-weight: bold;
+}
+
+.gimp-shotcut-imagens{
+    display: flex;
+    flex-direction: row;
+}
+
+form{
+    background-color: rgb(221, 221, 221);
+    margin: 0 150px;
+    padding: 25px 25px;
+}
+
+.formulario-texto{
+    padding: 100px 395px;
+}
+
+.redes{
+    display:flex;
+    background-color: rgb(221, 221, 221);
+    margin: 0 150px;
+    padding: 25px 25px;
+    justify-content: space-around;
+}
+
+.redes img{
+    height: 80px;
+}
+
+.redes img:hover{
+    opacity: 60%;
 }

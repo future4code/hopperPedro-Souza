@@ -8,6 +8,21 @@ body{
     background-color: rgb(22, 22, 22);
 }
 
+.menu{
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    margin: 0 150px;
+    justify-content: space-around;
+}
+
+.menu span{
+    font-weight: bold;
+}
+
+.menu span:hover{
+    opacity: 60%;
+}
+
 .perfil-descricao{
     display: flex;
     background-color: rgb(221, 221, 221);
@@ -135,4 +150,36 @@ form{
 
 .redes img:hover{
     opacity: 60%;
+}
+
+.projeto-JS{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(221, 221, 221);
+    margin: 0 150px;
+    padding: 25px 25px; 
+    align-items: center;
+}
+
+.projeto-JS img{
+    display: block;
+}
+
+.projeto-JS span{
+    display: block;
+    padding: 25px 0;
+    font-weight: bold;
+}
+
+.projeto-JS-tec{
+    display:flex;
+    background-color: rgb(221, 221, 221);
+    margin: 0 150px;
+    padding: 25px 25px; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.projeto-JS-tec img{
+    height: 200px;
 }

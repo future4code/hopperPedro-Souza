@@ -1,1 +1,1 @@
-faulty-fog.surge.sh
+fanatical-discovery.surge.sh

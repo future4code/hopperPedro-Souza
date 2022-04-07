@@ -27,19 +27,6 @@ header .lupa:hover{
     opacity: 60%;
 }
 
-main{
-    display: grid;
-    width: 100vw;
-    height: 88vh;
-    background-color:bisque;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
-    row-gap: 20px;
-    column-gap: 0;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .video{
     display: flex;
     flex-direction: column;
@@ -57,26 +44,81 @@ main{
     opacity: 65%;
 }
 
-footer{
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    height: 40px;
-    width: 100vw;
-    background-color: peru;
-    justify-content: center;
-    align-items: center;
-}
-
 .detalhes{
     display:flex;
     flex-direction: column;
-    width: 100vw;
-    height: 600px;
-    background-color:bisque;
+    justify-content: space-around;
     align-items: center;
+    width: 100vw;
 }
 
 .detalhes video{
-    margin: 0 0 150px 0;
+    width: 70%;
+}
+
+@media screen and (min-device-width: 801px){
+    main{
+        display: grid;
+        width: 100vw;
+        height: 88vh;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 20px;
+        column-gap: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        height: 40px;
+        width: 100vw;
+        background-color: peru;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-device-width:481px) and (max-device-width:800px){
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }    
+
+    footer{
+        display: flex;
+        height: 40px;
+        width: 100vw;
+        background-color: peru;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video{
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-device-width: 480px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around
+    }    
+
+    footer{
+        display: flex;
+        height: 40px;
+        width: 100vw;
+        background-color: peru;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video{
+        margin: 10px 0;
+    }
 }

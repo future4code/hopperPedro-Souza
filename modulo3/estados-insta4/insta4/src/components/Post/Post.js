@@ -44,12 +44,23 @@ class Post extends React.Component {
   state = {
     curtido: false,
     numeroCurtidas: 10,
-    comentando: true,
+    comentando: false,
     numeroComentarios: 5
   }
 
   onClickCurtida = () => {
-    console.log('Curtiu!')
+    this.setState({
+      curtido: !this.state.curtido
+    })
+    if(this.state.curtido){
+      this.setState({
+        numeroCurtidas: this.state.numeroCurtidas - 1
+      })
+    }else{
+      this.setState({
+        numeroCurtidas: this.state.numeroCurtidas + 1
+      })
+    }
   }
 
   onClickComentario = () => {
@@ -68,6 +79,7 @@ class Post extends React.Component {
   render() {
     let iconeCurtida
 
+    // "curtido" altera a imagem iconeCurtida
     if(this.state.curtido) {
       iconeCurtida = iconeCoracaoPreto
     } else {
@@ -76,9 +88,11 @@ class Post extends React.Component {
 
     let componenteComentario
 
+    // "comentando" aciona o componente SecaoComentario abaixo do footer
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
+    // A SecaoComentario recebe uma props chamada aoEnviar
 
     return <PostContainer>
       <PostHeader>

@@ -17,6 +17,7 @@ const Lista = styled.div`
     padding: 0 10px 30px 10px;
     height: 100vh;
     justify-content: flex-end;
+    word-wrap: break-word;
 `
 
 const Balao = styled.p`
@@ -53,21 +54,29 @@ export class Principal extends React.Component{
         inputMensagem: ""
     }
     
-    
-    
     adicionaMensagem = () => {
         const novaMensagem = {
           usuario: this.state.inputUsuario,
           mensagem: this.state.inputMensagem
         };
     
-        const novasMensagens = [...this.state.mensagens, novaMensagem];
+        const addMensagem = [...this.state.mensagens, novaMensagem];
     
-        this.setState({mensagens: novasMensagens});
+        this.setState({mensagens: addMensagem})
     
         this.setState({inputUsuario: ""});
         this.setState({inputMensagem: ""});
     }
+
+    // removeMensagem = (index) => {
+    //     const rmMensagem = [...this.state.mensagens].splice(index, 1);
+        
+    //     this.atualizaMensagens(rmMensagem)
+    // }
+
+    // atualizaMensagens = (novasMensagens) => {
+    //     this.setState({mensagens: novasMensagens});
+    // }
     
     onChangeInputUsuario = (event) => {
         this.setState({inputUsuario: event.target.value})
@@ -76,12 +85,14 @@ export class Principal extends React.Component{
     onChangeInputMensagem = (event) => {
         this.setState({inputMensagem: event.target.value})
     }
-    
+
     render(){
-        const listaDeMensagens = this.state.mensagens.map( (mensagens) => {
+        const listaDeMensagens = this.state.mensagens.map( (mensagens,index) => {
             return(
-                <Balao>
-                  {mensagens.usuario}: {mensagens.mensagem}
+                <Balao 
+                    key={this.mensagem} 
+                    // onDoubleClick={this.removeMensagem(index)}
+                    >{mensagens.usuario}: {mensagens.mensagem}
                 </Balao>
             );
         });
@@ -94,16 +105,29 @@ export class Principal extends React.Component{
               </Lista>
               <Entrada>
                 <Usuario
-                  value={this.state.inputUsuario}
-                  onChange={this.onChangeInputUsuario}
-                  placeholder={"Usuário"}
+                    value={this.state.inputUsuario}
+                    onChange={this.onChangeInputUsuario}
+                    placeholder={"Usuário"}
+                    onKeyPress={(event) => {
+                        if(event.key === "Enter"){
+                            this.setState(this.adicionaMensagem)
+                        }
+                    }}
                 />
                 <Mensagem
-                  value={this.state.inputMensagem}
-                  onChange={this.onChangeInputMensagem}
-                  placeholder={"Mensagem"}
+                    value={this.state.inputMensagem}
+                    onChange={this.onChangeInputMensagem}
+                    placeholder={"Mensagem"}
+                    onKeyPress={(event) => {
+                        if(event.key === "Enter"){
+                            this.setState(this.adicionaMensagem)
+                        }
+                    }}
                 />
-                <button onClick={this.adicionaMensagem}>Enviar</button>
+                <button 
+                    type="submit" 
+                    onClick={this.adicionaMensagem}
+                >Enviar</button>
               </Entrada>
             </Container>
         );

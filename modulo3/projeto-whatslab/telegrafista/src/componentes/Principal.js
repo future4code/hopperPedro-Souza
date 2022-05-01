@@ -2,13 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 380px;
+    width: 580px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
     height: 100%;
     background-color: #d2b68c;
+`
+
+const Titulo = styled.p`
+    font-size: 40px;
+    font-weight: bold;
+    align-self: center;
 `
 
 const Lista = styled.div`
@@ -18,6 +24,7 @@ const Lista = styled.div`
     height: 100vh;
     justify-content: flex-end;
     word-wrap: break-word;
+    max-width: 560px;
 `
 
 const Balao = styled.p`
@@ -25,26 +32,30 @@ const Balao = styled.p`
     padding: 5px;
     border-radius: 5px;
     box-shadow: 3px 3px 3px grey;
+    width: fit-content;
+    max-width: calc(100% - 10px);
 `
 
-const Titulo = styled.p`
-    font-size: 40px;
-    font-weight: bold;
-    align-self: center;
+const EuBalao = styled.p`
+    background-color: skyblue;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
+    width: fit-content;
+    max-width: calc(100% - 10px);
+    align-self: end;
 `
 
 const Entrada = styled.div`
     display: flex;
-    position: absolute;
-    bottom: 0;
 `
 
 const Usuario = styled.input`
-    width: 100px;
+    width: 180px;
 `
 
 const Mensagem = styled.input`
-    width: 210px;
+    flex-grow: 1;
 `
 
 export class Principal extends React.Component{
@@ -88,13 +99,24 @@ export class Principal extends React.Component{
 
     render(){
         const listaDeMensagens = this.state.mensagens.map( (mensagens,index) => {
-            return(
-                <Balao 
-                    key={this.mensagem} 
-                    // onDoubleClick={this.removeMensagem(index)}
-                    >{mensagens.usuario}: {mensagens.mensagem}
-                </Balao>
-            );
+            if(mensagens.usuario === "Eu" | mensagens.usuario === "eu" | mensagens.usuario === "EU"){
+                return(
+                <EuBalao
+                    key={this.usuario + this.mensagem} 
+                    //onDoubleClick={this.removeMensagem(index)}
+                    >{mensagens.mensagem}
+                </EuBalao>
+                );
+            }else{
+                return(
+                    <Balao
+                        key={this.mensagem} 
+                        //onDoubleClick={this.removeMensagem(index)}
+                        >{mensagens.usuario}: {mensagens.mensagem}
+                    </Balao>
+                );
+            // eslint-disable-next-line
+            };
         });
       
         return (

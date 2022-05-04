@@ -14,11 +14,11 @@ export class Etapa1 extends React.Component{
                 <h3>ETAPA 1: Dados Gerais</h3>
                 <Lista>
                     <p>1. Nome</p>
-                    <input></input>
+                    <input/>
                     <p>2. Idade</p>
-                    <input></input>
+                    <input/>
                     <p>3. Email</p>
-                    <input></input>
+                    <input/>
                     <p>4. Qual a sua escolaridade?</p>
                     <select>
                         <option>Ensino Médio Incompleto</option>

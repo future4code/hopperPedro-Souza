@@ -20,44 +20,58 @@ const InputsContainer = styled.div`
 
 class App extends React.Component {
     state = {
-      tarefas: [ 
-        {
-          id: Date.now(),
-          texto: 'Lavar a Louça',
-          completa: false
-        },
-        {
-          id: Date.now(),
-          texto: 'Exercício da Labenu',
-          completa: true
-        }
-      ],
+      tarefas: [],
       inputValue: '',
       filtro: ''
     }
 
-  componentDidUpdate() {
-
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.tarefas !== this.state.tarefas){
+      localStorage.setItem("tarefas", JSON.stringify(this.state.tarefas))
+    }
   };
 
   componentDidMount() {
-
+    if(localStorage.getItem("tarefas") !== null){
+      const tarefasString = localStorage.getItem("tarefas")
+      const todasTarefasObjeto = [...this.state.tarefas].concat(JSON.parse(tarefasString))
+      this.setState({tarefas: todasTarefasObjeto})
+    }
   };
 
   onChangeInput = (event) => {
-
+    this.setState({inputValue: event.target.value})
   }
 
   criaTarefa = () => {
+    const novaTarefa = {
+      id: Date.now(),
+      texto: this.state.inputValue,
+      completa: false
+    }
 
+    const novasTarefas = [...this.state.tarefas, novaTarefa]
+
+    this.setState({tarefas: novasTarefas})
   }
 
   selectTarefa = (id) => {
-
+    const mudaTarefas = this.state.tarefas.map((tarefa) => {
+      if(id === tarefa.id){
+        const mudaTarefa = {
+          ...tarefa,
+          completa: !tarefa.completa
+        }
+        return mudaTarefa
+      }else{
+        return tarefa
+      }
+    })
+    this.setState({tarefas: mudaTarefas})
   }
 
   onChangeFilter = (event) => {
-
+    this.setState({filtro: event.target.value})
   }
 
   render() {
@@ -83,7 +97,7 @@ class App extends React.Component {
 
         <InputsContainer>
           <label>Filtro</label>
-          <select value={this.state.filter} onChange={this.onChangeFilter}>
+          <select value={this.state.filtro} onChange={this.onChangeFilter}>
             <option value="">Nenhum</option>
             <option value="pendentes">Pendentes</option>
             <option value="completas">Completas</option>

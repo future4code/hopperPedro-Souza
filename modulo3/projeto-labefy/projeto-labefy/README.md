@@ -1,3 +1,15 @@
+Feito por:
+Pedro Paulo Jr
+
+Como usar?
+Crie playlists e adicione música do lado esquerdo das telas
+Confira o que foi adicionado no lado direito
+Clique em detalhes para ver as músicas da sua playlist
+Clique em "voltar" para voltar a tela de playlists
+Boa festa dancers
+Link Surge
+elderly-harmony.surge.sh
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

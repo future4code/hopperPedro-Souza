@@ -12,7 +12,7 @@ const Aplicativo = styled.div`
   width: 100vw;
 `
 
-const aluno = 'pedro-souza-hopper'
+const aluno = 'pedrosouza'
 
 function App(){
   let [tela,setTela] = useState(0)
@@ -41,7 +41,7 @@ function App(){
   const escolherPessoa = async (perfilId,escolha) => {
     try{
       const body = {
-        id: JSON.stringify(perfilId),
+        id: perfilId,
         choice: escolha
       }
       const response = await axios.post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/choose-person`,body)

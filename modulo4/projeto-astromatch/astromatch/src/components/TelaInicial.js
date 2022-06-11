@@ -16,12 +16,13 @@ const Reacoes = styled.div`
 `
 
 function TelaInicial(props){
+    console.log(props.perfil)
     return (
       <Tela>
           <button onClick={() => props.mudaTela(1)}>Ver Matches</button>
-          <img src={props.perfil.photo} alt={props.perfil.photo_alt}/>
-          <p>{props.perfil.name}, {props.perfil.age} anos</p>
-          <p>{props.perfil.bio}</p>
+            <img src={props.perfil.photo} alt={props.perfil.photo_alt}/>
+            <p>{props.perfil.name}, {props.perfil.age} anos</p>
+            <p>{props.perfil.bio}</p>
           <Reacoes>
               <button onClick={() => props.escolherPessoa(props.perfil.id,false)}>Não Gostei</button>
               <button onClick={() => props.escolherPessoa(props.perfil.id,true)}>MATCH!</button>

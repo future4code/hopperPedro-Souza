@@ -1,0 +1,1 @@
+export const tarefas = ["comer", "treinar", "codar", "namorar"]

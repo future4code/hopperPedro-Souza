@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
 import connection from "../database/connection"
 import { TABLE_USERS } from "../database/tableNames"
+import { UserDatabase } from "../database/UserDatabase"
 import { User } from "../models/User"
 
 export const createUser = async (req: Request, res: Response) => {
@@ -25,11 +26,14 @@ export const createUser = async (req: Request, res: Response) => {
             password
         )
 
-        await connection(TABLE_USERS).insert({
-            id: user.getId(),
-            email: user.getEmail(),
-            password: user.getPassword()
-        })
+        // await connection(TABLE_USERS).insert({
+        //     id: user.getId(),
+        //     email: user.getEmail(),
+        //     password: user.getPassword()
+        // })
+
+        const userDatabase = new UserDatabase
+        userDatabase.createUser(user)
         
         res.status(201).send({ message: "Usuário criado", user: user })
     } catch (error) {

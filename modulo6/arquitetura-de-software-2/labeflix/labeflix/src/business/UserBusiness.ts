@@ -18,4 +18,11 @@ export class UserBusiness {
     })
   }
 
+  async getAll():Promise<any> {
+    const userDatabase = new UserDatabase()
+    const result = await userDatabase.getAll()
+
+    return result
+  }
+
 }

@@ -2,9 +2,27 @@ POST http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-    "name": "teste",
-    "email": "email@email.com",
-    "password": "23432535"
+    "name": "pedro",
+    "email": "pedro@email.com",
+    "password": "5345342"
 }
 
+###
 
+GET http://localhost:3003/user/getAll
+
+###
+
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{ 
+    "title": "O Senhor dos Anéis", 
+    "description": "Amigos sobem a montanha de Mordor", 
+    "duration_in_minutes": 600,
+    "year_of_release": 2003
+}
+
+###
+
+GET http://localhost:3003/movie/getAll

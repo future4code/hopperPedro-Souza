@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Dog_Walking (
+    id VARCHAR(64) PRIMARY KEY,
+    status VARCHAR(64) NOT NULL,
+    data DATE NOT NULL,
+    preco VARCHAR(64) NOT NULL,
+    duracao VARCHAR(64) NOT NULL,
+    latitude VARCHAR(64) NOT NULL,
+    longitude VARCHAR(64) NOT NULL,
+    pets VARCHAR(64) NOT NULL,
+    inicio VARCHAR(64) NOT NULL,
+    fim VARCHAR(64) NOT NULL
+)

@@ -4,12 +4,16 @@ import { CustomError } from "../error/customError"
 import { walkInputDTO } from "../model/DogModels"
 
 export class PetController {
+    constructor(
+        private petBusiness: PetBusiness
+    ){}
+
     public index = async (req: Request, res: Response) => {
         try {
             const {limit, offset} = req.body
             
-            const petBusiness = new PetBusiness()
-            const result = await petBusiness.index(limit, offset)
+            // const petBusiness = new PetBusiness()
+            const result = await this.petBusiness.index(limit, offset)
 
             res.status(200).send(result)
         } catch (error: any) {
@@ -21,8 +25,8 @@ export class PetController {
         try {
             const id = req.body.id
 
-            const petBusiness = new PetBusiness()
-            const result = await petBusiness.show(id)
+            // const petBusiness = new PetBusiness()
+            const result = await this.petBusiness.show(id)
 
             res.status(200).send(result)
         } catch (error: any) {
@@ -53,8 +57,8 @@ export class PetController {
                 fim
             }
 
-            const petBusiness = new PetBusiness()
-            await petBusiness.createWalk(input)
+            // const petBusiness = new PetBusiness()
+            await this.petBusiness.createWalk(input)
 
             res.status(200).send("Created")
         } catch (error: any) {
@@ -66,8 +70,8 @@ export class PetController {
         try {
             const id = req.body.id
 
-            const petBusiness = new PetBusiness()
-            await petBusiness.start_walk(id)
+            // const petBusiness = new PetBusiness()
+            await this.petBusiness.start_walk(id)
 
             res.status(200).send("O passeio começou!")
         } catch (error: any) {
@@ -80,8 +84,8 @@ export class PetController {
         try {
             const id = req.body.id
             
-            const petBusiness = new PetBusiness()
-            await petBusiness.finish_walk(id)
+            // const petBusiness = new PetBusiness()
+            await this.petBusiness.finish_walk(id)
 
             res.status(200).send("O passei acabou!")
         } catch (error: any) {

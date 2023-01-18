@@ -2,9 +2,10 @@ import { CustomError } from "../error/customError";
 import { dogWalking, STATUS } from "../model/DogModels";
 import { DurationTime } from "./DurationTime";
 import { BaseDatabase } from "./BaseDatabase";
+import { PetRepository } from "../business/PetRepository";
 // import moment from "moment";
 
-export class PetDatabase extends BaseDatabase{
+export class PetDatabase extends BaseDatabase implements PetRepository{
     public index = async (limit: number, offset: number): Promise<any> => {
         try {
             const result = await PetDatabase.connection("Dog_Walking")

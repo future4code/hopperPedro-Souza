@@ -1,6 +1,7 @@
+import { IRecibo } from "../business/Ports";
 import { DURACAO } from "../model/DogModels";
 
-export class Recibo {
+export class Recibo implements IRecibo{
     public gerarRecibo = (duracao: DURACAO, pets: number): number => {
         if(duracao === 30){
             const preco = 25 + (pets - 1)*15

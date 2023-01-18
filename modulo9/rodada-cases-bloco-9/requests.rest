@@ -1,9 +1,9 @@
-GET http://localhost:3003/pet/index
+GET http://localhost:3306/pet/index
 Content-Type: application/json
 
 {
     "limit": 3,
-    "offset": 0
+    "offset": 1
 }
 
 ###

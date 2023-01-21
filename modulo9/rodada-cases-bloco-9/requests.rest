@@ -1,0 +1,49 @@
+GET http://localhost:3306/pet/index
+Content-Type: application/json
+
+{
+    "limit": 3,
+    "offset": 1
+}
+
+###
+
+GET http://localhost:3003/pet/show
+Content-Type: application/json
+
+{
+    "id": "fdd976dd-dcb0-4ea7-8660-79d623121ff2"
+}
+
+###
+
+POST http://localhost:3003/pet/create
+Content-Type: application/json
+
+{
+    "data": "2022-12-28",
+    "duracao": 60,
+    "latitude": -1.20778,
+    "longitude": -47.3925,
+    "pets": 6,
+    "inicio": "12:00:00",
+    "fim": "13:00:00"
+}
+
+###
+
+PUT http://localhost:3003/pet/start_walk
+Content-Type: application/json
+
+{
+    "id": "4324fde6-0949-42be-ac19-112939340660"
+}
+
+###
+
+PUT http://localhost:3003/pet/finish_walk
+Content-Type: application/json
+
+{
+    "id": "4324fde6-0949-42be-ac19-112939340660"
+}
